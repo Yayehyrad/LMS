@@ -1,5 +1,6 @@
 import  Sidebar  from "@/app/(Dashboard)/_components/Sidebar"
 import Navbar from "./_components/navbar"
+import TostProvider from "@/components/providers/toast-provider"
 
 export default function DashboardLayout({
     children,
@@ -14,6 +15,7 @@ export default function DashboardLayout({
         <Sidebar />
       </div>
       <main className="md:pl-56 h-full p-[80px]">
+        <TostProvider />
        {children}
       </main>
       </div>

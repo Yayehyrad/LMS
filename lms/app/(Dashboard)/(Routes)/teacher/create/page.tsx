@@ -17,6 +17,7 @@ import {
     FormLabel,
     FormMessage,
   } from "@/components/ui/form"
+import toast from "react-hot-toast";
 
 
 const formSchema = z.object({
@@ -39,7 +40,7 @@ function Create() {
             const response = await axios.post('/api/course' , values)
             router.push(`/teacher/courses/${response.data.id}`)
         } catch (error) {
-            console.log("problem")
+            toast.error('error')
         }
     }
   return (
